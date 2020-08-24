@@ -1,0 +1,66 @@
+.request {
+  cursor: pointer;
+  display: inline-flex;
+  flex-direction: column;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.request--new {
+  border: rgb(23, 154, 114) solid 2px;
+}
+
+.request--answered {
+  border: #e8a818 solid 2px;
+}
+
+.request__descrip--new {
+  color: rgb(23, 154, 114);
+}
+
+.request__descrip--answered {
+  color: #e8a818;
+}
+
+.request__image {
+  margin-top: 7.5%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+@media screen and (min-width: 840px) {
+  .request {
+    width: 38%;
+    height: 58%;
+    border-radius: 10%;
+    margin: 2.5% 2.5% 2.5% 2.5%;
+  }
+
+  .request__image {
+    width: 80%;
+    height: 65.65%;
+  }
+
+  .request__descrip {
+    font-size: larger;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .request {
+    width: 87.5%;
+    height: 250px;
+    border-radius: 20px;
+    margin: 2.5% 2.5% 2.5% 2.5%;
+  }
+
+  .request__image {
+    width: 87.5%;
+    height: 70%;
+  }
+
+  .last-item {
+    margin-bottom: 7.5%;
+  }
+}

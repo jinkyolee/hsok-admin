@@ -1,0 +1,76 @@
+.main {
+  width: 100%;
+  height: 100%;
+}
+
+.nav-bar {
+  width: 100%;
+  overflow: hidden;
+  background-color: rgb(23, 154, 114);
+  height: 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.nav-bar--answered {
+  background-color: #e8a818;
+}
+
+.nav-bar a {
+  color: #f2f2f2;
+  text-align: center;
+  text-decoration: none;
+}
+
+.nav-bar__text {
+  color: white;
+}
+
+@media screen and (min-width: 840px) {
+  .pos-right {
+    margin-right: 1%;
+  }
+
+  .pos-left {
+    margin-left: 1%;
+  }
+
+  .nav-bar a {
+    font-size: x-large;
+  }
+
+  .nav-bar__text {
+    font-size: x-large;
+  }
+
+  .nav-bar__column {
+    width: 150px;
+    margin-left: 1%;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .pos-left {
+    margin-left: 2%;
+  }
+
+  .pos-right {
+    margin-right: 2%;
+  }
+
+  .nav-bar a {
+    font-size: large;
+  }
+
+  .nav-bar__text {
+    font-size: large;
+  }
+
+  .nav-bar__column {
+    width: 175px;
+  }
+}

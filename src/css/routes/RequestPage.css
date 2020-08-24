@@ -1,0 +1,23 @@
+/* 요청 리스트 */
+.requests-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 840px) {
+  .requests-container {
+    margin-top: 3%;
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .requests-container {
+    margin-top: 15%;
+    margin-bottom: 5%;
+  }
+}

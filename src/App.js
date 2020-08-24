@@ -1,25 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Route, Switch, BrowserRouter as Router } from "react-router-dom";
+import Navigation from "./js/components/Navigation";
+import Home from "./js/routes/Home";
+import NewRequests from "./js/routes/NewRequests";
+import AnsweredReqs from "./js/routes/AnsweredRequests";
+import RequestDetail from "./js/routes/RequestDetail";
+import AnswerDetail from "./js/routes/AnswerDetail";
+import AnswerPage from "./js/routes/AnswerPage";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Switch>
+        <Navigation>
+          <Route path="/" exact={true} component={Home} />
+          <Route path="/new-requests" exact={true} component={NewRequests} />
+          <Route
+            path="/answered-requests"
+            exact={true}
+            component={AnsweredReqs}
+          />
+          <Route
+            path="/request-detail"
+            exact={true}
+            component={RequestDetail}
+          />
+          <Route path="/answer-detail" exact={true} component={AnswerDetail} />
+          <Route path="/answer-request" exact={true} component={AnswerPage} />
+        </Navigation>
+      </Switch>
+    </Router>
   );
 }
 

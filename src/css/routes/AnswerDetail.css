@@ -1,0 +1,218 @@
+/* 답변하기 페이지 */
+.answer-sheet {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.answer-set {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  margin-top: 3%;
+}
+
+.answer__title {
+  color: rgb(23, 154, 114);
+}
+
+.answer__title--answered {
+  color: #e8a818;
+}
+
+.input-btn-container {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1% 0 0 0;
+}
+
+.add-img-button {
+  background-color: #e0e0e0;
+  border-radius: 100%;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-img-button__image {
+  object-fit: cover;
+}
+
+.answer-input {
+  border: #e0e0e0 solid 10px;
+  background-color: #e0e0e0;
+  /* padding: 1% 1% 1% 1%; */
+}
+
+.answer__text {
+  border: #e0e0e0 solid 10px;
+  background-color: #e0e0e0;
+}
+
+.image-array {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+@media screen and (min-width: 840px) {
+  .answer-set {
+    height: 150px;
+  }
+
+  .answer-set--with-array {
+    height: 440px;
+  }
+
+  .answer__title {
+    font-size: xx-large;
+  }
+
+  .answer__title--answered {
+    color: #e8a818;
+  }
+
+  .input-btn-container {
+    width: 1150px;
+  }
+
+  .answer-input {
+    width: 1000px;
+    height: 65px;
+    border-radius: 15px;
+    font-size: larger;
+  }
+
+  .add-img-button {
+    width: 80px;
+    height: 80px;
+  }
+
+  .add-img-button__image {
+    width: 47px;
+    height: 37px;
+  }
+
+  /* 답변 한 요청 보기 페이지 */
+  .answer__text {
+    width: 1000px;
+    height: 65px;
+    border-radius: 50px;
+    display: flex;
+    border: #e0e0e0 solid 2px;
+    background-color: #e0e0e0;
+    padding-left: 30px;
+    align-items: center;
+  }
+
+  .image-array {
+    width: 1000px;
+    height: 250px;
+    margin: 2% 0 0 0;
+  }
+
+  .array-image--1 {
+    width: 50%;
+    height: 100%;
+    display: inline-block;
+    object-fit: cover;
+    border-radius: 50px;
+  }
+
+  .array-image--2 {
+    width: 42%;
+    height: 100%;
+    display: inline-block;
+    object-fit: cover;
+    border-radius: 50px;
+  }
+
+  .array-image--3 {
+    width: 30%;
+    height: 100%;
+    display: inline-block;
+    object-fit: cover;
+    border-radius: 50px;
+  }
+
+  .array-image--4 {
+    width: 22%;
+    height: 100%;
+    display: inline-block;
+    object-fit: cover;
+    border-radius: 50px;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  /* 답변하기 패이지 */
+  .answer-set {
+    height: 85px;
+    width: 85%;
+  }
+
+  .input-btn-container {
+    width: 100%;
+  }
+
+  .answer-input {
+    width: 70%;
+    height: 30px;
+    border-radius: 10px;
+  }
+
+  .add-img-button {
+    width: 50px;
+    height: 50px;
+  }
+
+  .add-img-button__image {
+    width: 30px;
+    height: 23.5px;
+  }
+
+  .answer__title {
+    font-size: larger;
+  }
+
+  /* 견적 답변 페이지 */
+  .answer__text {
+    width: 90%;
+    height: 30px;
+    border-radius: 10px;
+  }
+
+  .answer-set--with-array {
+    height: 150px;
+  }
+
+  .image-array {
+    width: 100%;
+    height: 50px;
+  }
+
+  .array-image--1 {
+    width: 140px;
+    height: 50px;
+  }
+
+  .array-image--2 {
+    width: calc(140px / 2);
+    height: 50px;
+  }
+
+  .array-image--3 {
+    width: calc(140px / 3);
+    height: 50px;
+  }
+
+  .array-image--4 {
+    width: calc(140px / 4);
+    height: 50px;
+  }
+}
