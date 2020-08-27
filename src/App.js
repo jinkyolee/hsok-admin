@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Switch, BrowserRouter as Router } from "react-router-dom";
+import { Route, Switch, BrowserRouter } from "react-router-dom";
 import Navigation from "./js/components/Navigation";
 import Home from "./js/routes/Home";
 import NewRequests from "./js/routes/NewRequests";
@@ -10,7 +10,7 @@ import AnswerPage from "./js/routes/AnswerPage";
 
 function App() {
   return (
-    <Router>
+    <BrowserRouter>
       <Switch>
         <Navigation>
           <Route path="/" exact={true} component={Home} />
@@ -29,7 +29,7 @@ function App() {
           <Route path="/answer-request" exact={true} component={AnswerPage} />
         </Navigation>
       </Switch>
-    </Router>
+    </BrowserRouter>
   );
 }
 

@@ -38,9 +38,7 @@ function RequestDetail(props) {
         </div>
       </section>
       <Link to="/answer-request" className="button button--big button--new">
-        <span className="button__text button__text--large">
-          견적 답변 하러 가기
-        </span>
+        견적 답변 하러 가기
       </Link>
     </section>
   );

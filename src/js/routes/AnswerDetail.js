@@ -6,7 +6,7 @@ import AnswerSet from "../components/AnswerSet";
 
 function AnswerDetail(props) {
   return (
-    <section class="answer-sheet top-item--mob top-item--desk">
+    <section className="answer-sheet top-item--mob top-item--desk">
       <AnswerSet key={1} answered={true} order={1} />
       <AnswerSet key={2} answered={true} order={2} />
       <AnswerSet key={3} answered={true} order={3} />
@@ -18,9 +18,7 @@ function AnswerDetail(props) {
         to="./answered-requests"
         className="button button--big button--answered"
       >
-        <span class="button__text button__text--large button__text--answered">
-          다른 요청 보기
-        </span>
+        다른 요청 보기
       </Link>
     </section>
   );

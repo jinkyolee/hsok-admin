@@ -15,10 +15,10 @@ function Home() {
       </div>
       <div className="home-actions">
         <Link to="/new-requests" className="button button--new">
-          <div className="button__text">견적 주기</div>
+          견적 주기
         </Link>
         <Link to="/answered-requests" className="button button--answered">
-          <div className="button__text button__text--answered">완료된 견적</div>
+          완료된 견적
         </Link>
       </div>
     </section>

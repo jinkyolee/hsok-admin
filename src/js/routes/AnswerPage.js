@@ -1,75 +1,22 @@
 import React from "react";
-import buttonImage from "../../images/add-img-btn.png";
+import AnswerSet from "../components/AnswerSet";
+import "../../css/routes/AnswerDetail.css";
 
 function AnswerPage() {
   return (
-    <form class="answer-sheet top-item--mob top-item--desk">
-      <section class="answer-set">
-        <span class="answer__title">가격과 할인 정보</span>
-        <section class="input-btn-container">
-          <textarea class="answer-input"></textarea>
-          <div class="add-img-button">
-            <img src={buttonImage} class="add-img-button__image" alt="" />
-          </div>
-        </section>
-      </section>
-      <section class="answer-set">
-        <span class="answer__title">맞춤/대여 과정과 소요 기간</span>
-        <section class="input-btn-container">
-          <textarea class="answer-input"></textarea>
-          <div class="add-img-button">
-            <img src={buttonImage} class="add-img-button__image" alt="" />
-          </div>
-        </section>
-      </section>
-      <section class="answer-set">
-        <span class="answer__title">서비스 상품</span>
-        <section class="input-btn-container">
-          <textarea class="answer-input"></textarea>
-          <div class="add-img-button">
-            <img src={buttonImage} class="add-img-button__image" alt="" />
-          </div>
-        </section>
-      </section>
-      <section class="answer-set">
-        <span class="answer__title">한복 디자인</span>
-        <section class="input-btn-container">
-          <textarea class="answer-input"></textarea>
-          <div class="add-img-button">
-            <img src={buttonImage} class="add-img-button__image" alt="" />
-          </div>
-        </section>
-      </section>
-      <section class="answer-set">
-        <span class="answer__title">한복 색감</span>
-        <section class="input-btn-container">
-          <textarea class="answer-input"></textarea>
-          <div class="add-img-button">
-            <img src={buttonImage} class="add-img-button__image" alt="" />
-          </div>
-        </section>
-      </section>
-      <section class="answer-set">
-        <span class="answer__title">디테일</span>
-        <section class="input-btn-container">
-          <textarea class="answer-input"></textarea>
-          <div class="add-img-button">
-            <img src={buttonImage} class="add-img-button__image" alt="" />
-          </div>
-        </section>
-      </section>
-      <section class="answer-set">
-        <span class="answer__title">참고사항</span>
-        <section class="input-btn-container">
-          <textarea class="answer-input"></textarea>
-          <div class="add-img-button">
-            <img src={buttonImage} class="add-img-button__image" alt="" />
-          </div>
-        </section>
-      </section>
-      <a href="./new-requests" class="button button--big button--new">
-        <span class="button__text button__text--large">견적 답변 완료</span>
-      </a>
+    <form className="answer-sheet top-item--mob top-item--desk">
+      <AnswerSet key={1} order={1} answered={false} />
+      <AnswerSet key={2} order={2} answered={false} />
+      <AnswerSet key={3} order={3} answered={false} />
+      <AnswerSet key={4} order={4} answered={false} />
+      <AnswerSet key={5} order={5} answered={false} />
+      <AnswerSet key={6} order={6} answered={false} />
+      <AnswerSet key={7} order={7} answered={false} />
+      <input
+        type="submit"
+        className="button button--big button--new"
+        value="견적 답변 완료"
+      />
     </form>
   );
 }
