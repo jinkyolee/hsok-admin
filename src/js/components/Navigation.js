@@ -50,7 +50,7 @@ function setTabs(url) {
   return elements;
 }
 
-function Navigation(props) {
+export default function Navigation(props) {
   var navBar;
   const { children } = props;
   var url = props.location.pathname;
@@ -111,5 +111,3 @@ function Navigation(props) {
 
   return template;
 }
-
-export default Navigation;

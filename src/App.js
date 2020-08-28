@@ -7,26 +7,22 @@ import AnsweredReqs from "./js/routes/AnsweredRequests";
 import RequestDetail from "./js/routes/RequestDetail";
 import AnswerDetail from "./js/routes/AnswerDetail";
 import AnswerPage from "./js/routes/AnswerPage";
+import NoMatch from "./js/routes/NoMatch";
 
 function App() {
   return (
     <BrowserRouter>
       <Switch>
         <Navigation>
-          <Route path="/" exact={true} component={Home} />
-          <Route path="/new-requests" exact={true} component={NewRequests} />
-          <Route
-            path="/answered-requests"
-            exact={true}
-            component={AnsweredReqs}
-          />
-          <Route
-            path="/request-detail"
-            exact={true}
-            component={RequestDetail}
-          />
-          <Route path="/answer-detail" exact={true} component={AnswerDetail} />
-          <Route path="/answer-request" exact={true} component={AnswerPage} />
+          <Switch>
+            <Route path="/" exact={true} component={Home} />
+            <Route path="/new-requests" component={NewRequests} />
+            <Route path="/answered-requests" component={AnsweredReqs} />
+            <Route path="/request-detail" component={RequestDetail} />
+            <Route path="/answer-detail" component={AnswerDetail} />
+            <Route path="/answer-request" component={AnswerPage} />
+            <Route path="*" component={NoMatch} />
+          </Switch>
         </Navigation>
       </Switch>
     </BrowserRouter>

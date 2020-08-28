@@ -18,6 +18,7 @@ class Request extends React.Component {
             src={this.props.image}
             className="request__image"
             alt={this.props.description}
+            // onMouseOver={this.handleEnter}
           />
         </Link>
       );
@@ -31,6 +32,7 @@ class Request extends React.Component {
             src={this.props.image}
             className="request__image"
             alt={this.props.description}
+            // onMouseOver={this.handleEnter}
           />
         </Link>
       );

@@ -71,27 +71,25 @@ function setTemplate(props) {
   return template;
 }
 
-class AnswerSet extends React.Component {
-  render() {
-    const template = setTemplate(this.props);
+function AnswerSet(props) {
+  const template = setTemplate(props);
 
-    // need to write function for image arrays in answer sets
-    // var images = [];
+  // need to write function for image arrays in answer sets
+  // var images = [];
 
-    // for (images from request {
-    //  images.push(<>)
-    // })
+  // for (images from request {
+  //  images.push(<>)
+  // })
 
-    return (
-      <section className="answer-set">
-        <span className={`answer__title ${template.cssTag}`}>
-          {template.title}
-        </span>
-        {template.elementTemplate}
-        {this.props.hasImages && <section class="image-array"></section>}
-      </section>
-    );
-  }
+  return (
+    <section className="answer-set">
+      <span className={`answer__title ${template.cssTag}`}>
+        {template.title}
+      </span>
+      {template.elementTemplate}
+      {props.hasImages && <section class="image-array"></section>}
+    </section>
+  );
 }
 
 export default AnswerSet;
