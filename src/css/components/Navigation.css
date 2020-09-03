@@ -14,6 +14,7 @@
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 15;
 }
 
 .nav-bar--answered {
@@ -21,9 +22,13 @@
 }
 
 .nav-bar a {
-  color: #f2f2f2;
+  color: rgb(242, 242, 242);
   text-align: center;
   text-decoration: none;
+}
+
+.nav-bar a:hover {
+  color: rgba(242, 242, 242, 0.75);
 }
 
 .nav-bar__text {
@@ -66,7 +71,7 @@
   }
 
   .column {
-    width: 160px;
+    width: 190px;
     margin-left: 1%;
   }
 }
