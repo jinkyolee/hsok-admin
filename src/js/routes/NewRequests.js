@@ -18,11 +18,13 @@ class NewRequests extends React.Component {
     super(props);
     this.state = {
       requests: [],
-      url: this.props.location.pathname,
+      // url: this.props.location.pathname,
     };
   }
 
   render() {
+    console.log(this.props);
+
     return (
       <div className="requests-container">
         <Request
@@ -30,28 +32,32 @@ class NewRequests extends React.Component {
           id={1}
           description={"소리 없는 방구"}
           images={images}
-          from={this.state.url}
+          // from={this.state.url}
+          from={"/new-requests"}
         />
         <Request
           key={2}
           id={2}
           description={"훈이 없는 짱구"}
           images={images}
-          from={this.state.url}
+          // from={this.state.url}
+          from={"/new-requests"}
         />
         <Request
           key={3}
           id={3}
           description={"이곳은 소라게 도시"}
           images={images}
-          from={this.state.url}
+          // from={this.state.url}
+          from={"/new-requests"}
         />
         <Request
           key={4}
           id={4}
           description={"이곳은 소락의 도시"}
           images={images}
-          from={this.state.url}
+          // from={this.state.url}
+          from={"/new-requests"}
         />
       </div>
     );

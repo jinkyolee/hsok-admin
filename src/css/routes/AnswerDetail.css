@@ -136,10 +136,21 @@
   }
 
   .answer-input {
-    width: 70%;
     height: 50px;
     border-radius: 10px;
     font-size: smaller;
+  }
+
+  @media screen and (min-width: 375px) {
+    .answer-input {
+      width: 80%;
+    }
+  }
+
+  @media screen and (max-width: 375px) {
+    .answer-input {
+      width: 75%;
+    }
   }
 
   .add-img-button {
@@ -158,7 +169,7 @@
 
   /* 견적 답변 페이지 */
   .answer__text {
-    width: 90%;
+    width: 100%;
     height: auto;
     border-radius: 10px;
   }

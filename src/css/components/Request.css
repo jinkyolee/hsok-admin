@@ -22,7 +22,7 @@
 .carousel__image {
   height: 100%;
   width: 100%;
-  object-fit: fill;
+  object-fit: cover;
   border-radius: 20px;
 }
 
@@ -61,10 +61,6 @@
 
 .request__descrip--answered {
   color: #e8a818;
-}
-
-.request__image {
-  object-fit: fill;
 }
 
 @media screen and (min-width: 840px) {
