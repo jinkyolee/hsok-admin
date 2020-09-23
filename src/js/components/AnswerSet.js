@@ -66,7 +66,7 @@ function setTemplate(props) {
             {console.log(`Key is ${props.order} for textarea: ${nameTag}`)}
             <img src={buttonImage} className="add-img-button__image" alt="" />
           </button>
-          <input type="file" key={props.order} id="fileInput" hidden />
+          <input type="file" key={props.order} name={title} hidden />
         </div>
       </section>
     );

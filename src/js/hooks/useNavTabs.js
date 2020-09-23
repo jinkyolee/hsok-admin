@@ -1,7 +1,7 @@
-// Custom Hooks for setting tab elements
+// Personal Hooks for setting tab elements
 import { useState, useEffect } from "react";
 
-const useSetTabs = (url) => {
+const useNavTabs = (url) => {
   const [link, setLink] = useState(""),
     [title, setTitle] = useState(""),
     [classTag, setClassTag] = useState(""),
@@ -28,9 +28,13 @@ const useSetTabs = (url) => {
       setLink("/answered-requests");
       setTitle("답변보기");
       setClassTag("column");
-    } else if (url === "/users") {
+    } else if (url === "/login") {
       setLink("");
       setTitle("로그인");
+      setClassTag("column");
+    } else if (url === "/signup") {
+      setLink("/login");
+      setTitle("회원가입");
       setClassTag("column");
     }
 
@@ -48,4 +52,4 @@ const useSetTabs = (url) => {
   return { link, title, classTag, status };
 };
 
-export default useSetTabs;
+export default useNavTabs;

@@ -8,8 +8,9 @@ import AnsweredReqs from "./js/routes/AnsweredRequests";
 import RequestDetail from "./js/routes/RequestDetail";
 import AnswerDetail from "./js/routes/AnswerDetail";
 import AnswerPage from "./js/routes/AnswerPage";
-import LoginPage from "./js/routes/LoginPage";
+import SignUpPage from "./js/routes/SignUpPage";
 import NoMatch from "./js/routes/NoMatch";
+import LoginPage from "./js/routes/LoginPage";
 
 const authRoutes = (
   <Switch>
@@ -27,9 +28,14 @@ const guestRoutes = (location, loginCallback) => {
   return (
     <Switch>
       <Route path="/" exact={true} component={Home} />
-      <Route path="/users" component={LoginPage} />
+      <Route path="/login" exact component={LoginPage} />
+      <Route
+        path="/signup"
+        component={SignUpPage}
+        loginCallback={loginCallback}
+      />
       <Route path="*">
-        <Redirect to={{ pathname: "/users", state: { referrer: location } }} />
+        <Redirect to={{ pathname: "/login", state: { referrer: location } }} />
       </Route>
     </Switch>
   );

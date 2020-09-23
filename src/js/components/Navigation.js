@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
 import "../../css/components/Navigation.css";
 import { Link } from "react-router-dom";
-import useSetTabs from "../hooks/useSetTabs";
+import useNavTabs from "../hooks/useNavTabs";
 import useSetNavType from "../hooks/useSetNavType";
 
 const Navigation = (props) => {
   const [template, setTemplate] = useState("");
   const { children, location } = props,
     { pathname } = location;
-  const { link, title, status } = useSetTabs(pathname);
+  const { link, title, status } = useNavTabs(pathname);
   const tagType = useSetNavType();
 
   useEffect(() => {

@@ -15,7 +15,10 @@ class AnswerPage extends React.Component {
 
   render() {
     return (
-      <form className="answer-sheet top-item--mob top-item--desk">
+      <form
+        className="answer-sheet top-item--mob top-item--desk"
+        name="answerSheet"
+      >
         <AnswerSet key={1} order={1} answered={false} />
         <AnswerSet key={2} order={2} answered={false} />
         <AnswerSet key={3} order={3} answered={false} />
