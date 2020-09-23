@@ -8,41 +8,33 @@ function handleClick() {
 
 function setTemplate(props) {
   var title;
+  var nameTag;
   var cssTag;
   var elementTemplate;
-  var nameTag;
 
-  switch (props.order) {
-    case 1:
-      title = "가격과 할인 정보";
-      nameTag = "price";
-      break;
-    case 2:
-      title = "맞춤/대여 과정과 소요 기간";
-      nameTag = "time";
-      break;
-    case 3:
-      title = "서비스 상품";
-      nameTag = "service";
-      break;
-    case 4:
-      title = "한복 디자인";
-      nameTag = "design";
-      break;
-    case 5:
-      title = "한복 색감";
-      nameTag = "color";
-      break;
-    case 6:
-      title = "디테일";
-      nameTag = "detail";
-      break;
-    case 7:
-      title = "참고 사항";
-      nameTag = "misc";
-      break;
-    default:
-      break;
+  const { order } = props;
+
+  if (order === 0) {
+    title = "가격과 할인 정보";
+    nameTag = "price";
+  } else if (order === 1) {
+    title = "맞춤/대여 과정과 소요 기간";
+    nameTag = "time";
+  } else if (order === 2) {
+    title = "서비스 상품";
+    nameTag = "service";
+  } else if (order === 3) {
+    title = "한복 디자인";
+    nameTag = "design";
+  } else if (order === 4) {
+    title = "한복 색감";
+    nameTag = "color";
+  } else if (order === 5) {
+    title = "디테일";
+    nameTag = "detail";
+  } else if (order === 6) {
+    title = "참고 사항";
+    nameTag = "misc";
   }
 
   if (props.answered) {
@@ -63,7 +55,6 @@ function setTemplate(props) {
             key={props.order - 1}
             onClick={handleClick}
           >
-            {console.log(`Key is ${props.order} for textarea: ${nameTag}`)}
             <img src={buttonImage} className="add-img-button__image" alt="" />
           </button>
           <input type="file" key={props.order} name={title} hidden />
@@ -79,12 +70,8 @@ function setTemplate(props) {
 function AnswerSet(props) {
   const template = setTemplate(props);
 
-  // need to write function for image arrays in answer sets
-  // var images = [];
-
-  // for (images from request {
-  //  images.push(<>)
-  // })
+  // should use useState when receiving images from backend
+  // const [images, setImages] = useState([]);
 
   return (
     <section className="answer-set">

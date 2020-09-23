@@ -2,7 +2,15 @@
   text-align: center;
   line-height: 25px;
   color: rgb(23, 154, 114);
-  font-size: 17.5px;
+  font-size: 19px;
+  width: 80%;
+}
+
+.explanation--login {
+  text-align: center;
+  line-height: 25px;
+  color: rgb(23, 154, 114);
+  font-size: 19px;
   width: 80%;
 }
 
@@ -15,8 +23,17 @@
   width: 80%;
 }
 
+.login-form {
+  margin-top: 37.5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+}
+
 .input-container {
-  margin-top: 2%;
+  margin-top: 5%;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -24,7 +41,7 @@
 }
 
 .checkbox-content {
-  margin-top: 37.5px;
+  margin-top: 27.5px;
 }
 
 .input-name {
@@ -110,12 +127,27 @@
   align-items: center;
 }
 
-@media screen and (max-width: 840px) {
+.other-controls {
+  display: flex;
+  width: 70%;
+  flex-direction: column;
+  align-items: center;
 }
 
-@media screen and (max-width: 330px) {
+.signup-link {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 360px) {
   .explanation {
-    margin-top: 15px;
+    margin-top: 30px;
+  }
+  .text-input {
+    font-size: 14.5px;
   }
 }
 
@@ -125,5 +157,23 @@
     margin-top: 15%;
     font-size: xx-large;
     line-height: 50px;
+  }
+}
+
+@media screen and (max-height: 570px) {
+  .explanation {
+    margin-top: 200px !important;
+  }
+}
+
+@media screen and (min-height: 570px) and (max-height: 670px) {
+  .explanation {
+    margin-top: 150px !important;
+  }
+}
+
+@media screen and (max-height: 750px) {
+  .explanation {
+    margin-top: 100px;
   }
 }

@@ -36,12 +36,17 @@ const useNavTabs = (url) => {
       setLink("/login");
       setTitle("회원가입");
       setClassTag("column");
+    } else if (url === "/account-recover") {
+      setLink("/login");
+      setTitle("비밀번호 찾기");
+      setClassTag("column");
     }
 
     if (
       url === "/new-requests" ||
       url === "/request-detail" ||
-      url === "/answer-request"
+      url === "/answer-request" ||
+      url === "/login"
     ) {
       setStatus("");
     } else if (url === "/answered-requests" || url === "/answer-detail") {

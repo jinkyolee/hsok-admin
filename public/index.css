@@ -68,4 +68,8 @@ span {
   .home-content {
     height: 100%;
   }
+
+  .home-content--auto {
+    height: auto;
+  }
 }

@@ -7,12 +7,14 @@ const LoginPage = () => {
   return (
     <div className="home-content">
       <div className="explanation">
-        아래의 간단한 회원가입을 통해 신규 <br />
-        고객들에게 우리 가게를 알릴 수 있습니다.
+        아래의 간단한 회원가입을 통해서 <br />
+        신규 고객들에게 우리 가게를 알릴 수 있습니다.
       </div>
       <form className="signup-form" name="signup-form">
         <InputContainer order={0} />
         <InputContainer order={1} />
+        <InputContainer order={2} />
+        <InputContainer order={3} />
         <div className="checkbox-content">
           <CheckboxBig />
           <div className="checkboxes">
