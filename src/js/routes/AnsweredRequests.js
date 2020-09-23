@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Request from "../components/Request";
 import image1 from "../../images/hanbok1.jpeg";
 import image2 from "../../images/hanbok2.jpeg";
@@ -13,49 +13,46 @@ const images = [
   { src: image4, description: "한복 4" },
 ];
 
-class AnsweredRequests extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      requests: [],
-      url: window.location.pathname,
-    };
-  }
+const AnsweredRequests = () => {
+  const rootLocation = "/answered-requests";
+  const [requests, setRequests] = useState([
+    {
+      description: "소리 없는 방구",
+      images: images,
+    },
+    {
+      description: "훈이 없는 짱구",
+      images: images,
+    },
+    {
+      description: "이곳은 소라게 도시",
+      images: images,
+    },
+    {
+      description: "이곳은 소락의 도시",
+      images: images,
+    },
+  ]);
 
-  render() {
-    return (
-      <div className="requests-container">
-        <Request
-          key={1}
-          id={1}
-          description={"소리 없는 방구"}
-          images={images}
-          from={this.state.url}
-        />
-        <Request
-          key={2}
-          id={2}
-          description={"훈이 없는 짱구"}
-          images={images}
-          from={this.state.url}
-        />
-        <Request
-          key={3}
-          id={3}
-          description={"이곳은 소라게 도시"}
-          images={images}
-          from={this.state.url}
-        />
-        <Request
-          key={4}
-          id={4}
-          description={"이곳은 소락의 도시"}
-          images={images}
-          from={this.state.url}
-        />
-      </div>
-    );
-  }
-}
+  useEffect(() => {
+    setRequests(requests);
+  }, [requests]);
+
+  return (
+    <div className="requests-container">
+      {requests.map((requestData, index) => {
+        return (
+          <Request
+            key={index}
+            id={index}
+            description={requestData.description}
+            images={requestData.images}
+            from={rootLocation}
+          />
+        );
+      })}
+    </div>
+  );
+};
 
 export default AnsweredRequests;

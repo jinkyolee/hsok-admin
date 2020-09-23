@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import useRequestProps from "../hooks/useRequestProps";
 import Carousel from "react-bootstrap/Carousel";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../../css/components/Request.css";
@@ -12,7 +13,7 @@ function objectMap(object, func) {
 }
 
 function ControlledCarousel(props) {
-  const [index, setIndex] = React.useState(0);
+  const [index, setIndex] = useState(0);
 
   const handleSelect = (selectedIndex, e) => {
     setIndex(selectedIndex);
@@ -43,43 +44,25 @@ function ControlledCarousel(props) {
   );
 }
 
-class Request extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      answerState: null,
-      nextURL: null,
-    };
-  }
+const Request = (props) => {
+  const { answerState, nextURL } = useRequestProps(props);
 
-  componentDidMount() {
-    if (this.props.from === "/answered-requests") {
-      this.setState({ answerState: "answered", nextURL: "/answer-detail" });
-    } else {
-      this.setState({ answerState: "new", nextURL: "/answer-request" });
-    }
-  }
-
-  render() {
-    return (
-      <Link
-        className={`request request--${this.state.answerState}`}
-        key={this.props.id}
-        to={this.state.nextURL}
-      >
-        <span
-          className={`request__descrip request__descrip--${this.state.answerState}`}
-        >
-          {this.props.description}
-        </span>
-        <ControlledCarousel
-          images={this.props.images}
-          answerState={this.state.answerState}
-          time="lots of time"
-        />
-      </Link>
-    );
-  }
-}
+  return (
+    <Link
+      className={`request request--${answerState}`}
+      key={props.id}
+      to={nextURL}
+    >
+      <span className={`request__descrip request__descrip--${answerState}`}>
+        {props.description}
+      </span>
+      <ControlledCarousel
+        images={props.images}
+        answerState={answerState}
+        time="lots of time"
+      />
+    </Link>
+  );
+};
 
 export default Request;
