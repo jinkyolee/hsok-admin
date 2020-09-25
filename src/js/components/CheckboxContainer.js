@@ -21,6 +21,22 @@ const setContent = (order) => {
   return { name, text, link };
 };
 
+const checkAllBoxes = () => {
+  const checkboxes = document.querySelectorAll(".check-small");
+  const largeCheck = document.querySelector("#check-big");
+  let checkState = false;
+
+  if (largeCheck.checked) {
+    checkState = true;
+  } else {
+    checkState = false;
+  }
+
+  for (let checkbox of checkboxes) {
+    checkbox.checked = checkState;
+  }
+};
+
 const CheckboxSmall = (props) => {
   const { name, text, link } = setContent(props.order);
 
@@ -45,7 +61,12 @@ const CheckboxBig = () => {
   return (
     <div className="check-container">
       <div className="check-column">
-        <input type="checkbox" name="agree-all" id="check-big" />
+        <input
+          type="checkbox"
+          name="agree-all"
+          id="check-big"
+          onChange={checkAllBoxes}
+        />
         <label id="check-big__lab" htmlFor="agree-all">
           전체 동의
         </label>
