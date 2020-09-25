@@ -13,8 +13,6 @@ const LoginPage = () => {
       <form className="signup-form" name="signup-form">
         <InputContainer order={0} />
         <InputContainer order={1} />
-        <InputContainer order={2} />
-        <InputContainer order={3} />
         <div className="checkbox-content">
           <CheckboxBig />
           <div className="checkboxes">

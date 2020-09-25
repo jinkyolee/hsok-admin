@@ -45,7 +45,7 @@ const guestRoutes = (location, loginCallback) => {
 };
 
 const App = () => {
-  const [loginStat, setLoginStat] = useState(true);
+  const [loginStat, setLoginStat] = useState(false);
   let location = useSetURLs(window.location.pathname);
 
   return (

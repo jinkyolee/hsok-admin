@@ -51,12 +51,13 @@ const Request = (props) => {
     <Link
       className={`request request--${answerState}`}
       key={props.id}
-      to={nextURL}
+      to={`${nextURL}?id=${props.id}`}
     >
       <span className={`request__descrip request__descrip--${answerState}`}>
         {props.description}
       </span>
       <ControlledCarousel
+        // props에서 받지 않음
         images={props.images}
         answerState={answerState}
         time="lots of time"

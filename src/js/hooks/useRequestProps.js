@@ -21,7 +21,7 @@ const useRequestProps = (props) => {
       setNextURL("/answer-detail");
     } else {
       setAnswerState("new");
-      setNextURL("/answer-request");
+      setNextURL("/request-detail");
     }
   }, [from]);
 

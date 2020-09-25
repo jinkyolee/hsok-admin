@@ -9,6 +9,8 @@ import { Link } from "react-router-dom";
 
 function RequestDetail(props) {
   // parameter를 props가 아니라 request에서 파싱한 값으로 받아야함
+  console.log(props);
+
   return (
     <section className="home-content" style={{ height: "auto" }}>
       <section className="detail-container top-item--desk">
@@ -37,7 +39,10 @@ function RequestDetail(props) {
           </section>
         </div>
       </section>
-      <Link to="/answer-request" className="button button--big button--new">
+      <Link
+        to={`/answer-request${props.location.search}`}
+        className="button button--big button--new"
+      >
         견적 답변 하러 가기
       </Link>
     </section>
