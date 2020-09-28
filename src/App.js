@@ -11,7 +11,6 @@ import AnswerPage from "./js/routes/AnswerPage";
 import SignUpPage from "./js/routes/SignUpPage";
 import NoMatch from "./js/routes/NoMatch";
 import LoginPage from "./js/routes/LoginPage";
-import AccountRecoverPage from "./js/routes/AccountRecoverPage";
 
 const authRoutes = (
   <Switch>
@@ -36,7 +35,6 @@ const guestRoutes = (location, loginCallback) => {
         loginCallback={loginCallback}
       />
       <Route path="/signup" component={SignUpPage} />
-      <Route path="/account-recover" component={AccountRecoverPage} />
       <Route path="*">
         <Redirect to={{ pathname: "/login", state: { referrer: location } }} />
       </Route>
@@ -45,7 +43,7 @@ const guestRoutes = (location, loginCallback) => {
 };
 
 const App = () => {
-  const [loginStat, setLoginStat] = useState(false);
+  const [loginStat, setLoginStat] = useState(true);
   let location = useSetURLs(window.location.pathname);
 
   return (

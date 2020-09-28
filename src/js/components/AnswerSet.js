@@ -68,17 +68,15 @@ function setTemplate(props) {
 }
 
 function AnswerSet(props) {
-  const template = setTemplate(props);
+  const { title, cssTag, elementTemplate } = setTemplate(props);
 
   // should use useState when receiving images from backend
   // const [images, setImages] = useState([]);
 
   return (
     <section className="answer-set">
-      <span className={`answer__title ${template.cssTag}`}>
-        {template.title}
-      </span>
-      {template.elementTemplate}
+      <span className={`answer__title ${cssTag}`}>{title}</span>
+      {elementTemplate}
       {props.hasImages && <section class="image-array"></section>}
     </section>
   );

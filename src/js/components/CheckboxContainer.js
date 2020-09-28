@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import checkAll from "../functions/checkAll";
+import setLarge from "../functions/setLarge";
 
 const setContent = (order) => {
   let name, text, link;
@@ -21,29 +23,19 @@ const setContent = (order) => {
   return { name, text, link };
 };
 
-const checkAllBoxes = () => {
-  const checkboxes = document.querySelectorAll(".check-small");
-  const largeCheck = document.querySelector("#check-big");
-  let checkState = false;
-
-  if (largeCheck.checked) {
-    checkState = true;
-  } else {
-    checkState = false;
-  }
-
-  for (let checkbox of checkboxes) {
-    checkbox.checked = checkState;
-  }
-};
-
 const CheckboxSmall = (props) => {
   const { name, text, link } = setContent(props.order);
 
   return (
     <div className="check-container">
       <div className="check-column">
-        <input type="checkbox" className="check-small" name={name} required />
+        <input
+          type="checkbox"
+          className="check-small"
+          name={name}
+          onChange={setLarge}
+          required
+        />
         <label className="check-small__lab" name={name}>
           {text}
         </label>
@@ -65,7 +57,7 @@ const CheckboxBig = () => {
           type="checkbox"
           name="agree-all"
           id="check-big"
-          onChange={checkAllBoxes}
+          onChange={checkAll}
         />
         <label id="check-big__lab" htmlFor="agree-all">
           전체 동의
