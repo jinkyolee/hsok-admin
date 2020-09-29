@@ -6,7 +6,6 @@
 .nav-bar {
   width: 100%;
   overflow: hidden;
-  background-color: rgb(23, 154, 114);
   height: 6%;
   display: flex;
   align-items: center;
@@ -15,6 +14,10 @@
   top: 0;
   left: 0;
   z-index: 15;
+}
+
+.nav-bar--new {
+  background-color: rgb(23, 154, 114);
 }
 
 .nav-bar--answered {

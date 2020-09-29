@@ -48,6 +48,10 @@
 
 @media screen and (max-width: 840px) {
   /* 세부 견적 보기 페이지 */
+  .detail-container:first-child {
+    margin-top: 10% !important;
+  }
+
   .descrip-container {
     flex-direction: column;
   }

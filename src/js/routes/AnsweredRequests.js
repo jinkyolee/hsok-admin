@@ -5,6 +5,7 @@ import image2 from "../../images/hanbok2.jpeg";
 import image3 from "../../images/hanbok3.jpeg";
 import image4 from "../../images/hanbok4.jpeg";
 import "../../css/routes/RequestPage.css";
+import Navigation from "../components/Navigation";
 
 const images = [
   { src: image1, description: "한복 1" },
@@ -39,19 +40,22 @@ const AnsweredRequests = () => {
   }, [requests]);
 
   return (
-    <div className="requests-container">
-      {requests.map((requestData, index) => {
-        return (
-          <Request
-            key={index}
-            id={index}
-            description={requestData.description}
-            images={requestData.images}
-            from={rootLocation}
-          />
-        );
-      })}
-    </div>
+    <>
+      <Navigation state="--answered" link="/" title="답변한 요청" />
+      <div className="requests-container">
+        {requests.map((requestData, index) => {
+          return (
+            <Request
+              key={index}
+              id={index}
+              description={requestData.description}
+              images={requestData.images}
+              from={rootLocation}
+            />
+          );
+        })}
+      </div>
+    </>
   );
 };
 
