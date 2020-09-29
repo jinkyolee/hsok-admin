@@ -2,17 +2,20 @@ import { useState, useEffect } from "react";
 
 const useSetNavType = () => {
   const screenSize = window.screen.width;
-  const [tagType, setTagType] = useState("");
+  const [type, setType] = useState("");
+  const [tag, setTag] = useState("");
 
   useEffect(() => {
     if (screenSize > 840) {
-      setTagType("span");
+      setType("span");
+      setTag("--mob");
     } else if (screenSize < 840) {
-      setTagType("link");
+      setType("link");
+      setTag("");
     }
   }, [screenSize]);
 
-  return tagType;
+  return { type, tag };
 };
 
 export default useSetNavType;

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Route, Switch, BrowserRouter, Redirect } from "react-router-dom";
 import useSetURLs from "./js/hooks/useSetURLs";
-import Navigation from "./js/components/Navigation";
 import Home from "./js/routes/Home";
 import NewRequests from "./js/routes/NewRequests";
 import AnsweredReqs from "./js/routes/AnsweredRequests";
@@ -49,9 +48,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <Switch>
-        <Navigation>
-          {loginStat ? authRoutes : guestRoutes(location, setLoginStat)}
-        </Navigation>
+        {loginStat ? authRoutes : guestRoutes(location, setLoginStat)}
       </Switch>
     </BrowserRouter>
   );
