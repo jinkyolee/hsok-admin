@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../../css/routes/AnswerDetail.css";
+import "../../css/routes/AnswerSet.css";
 import AnswerSet from "../components/AnswerSet";
 import Navigation from "../components/Navigation";
 
@@ -10,7 +10,7 @@ function AnswerDetail(props) {
   return (
     <>
       <Navigation
-        state="--answered"
+        state="answered"
         link={`/answered-requests?${props.location.search}`}
         title="답변 보기"
       />

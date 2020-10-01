@@ -41,7 +41,7 @@ const AnsweredRequests = () => {
 
   return (
     <>
-      <Navigation state="--answered" link="/" title="답변한 요청" />
+      <Navigation state="answered" link="/" title="답변한 요청" />
       <div className="requests-container">
         {requests.map((requestData, index) => {
           return (

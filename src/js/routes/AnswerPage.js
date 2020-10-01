@@ -1,6 +1,6 @@
 import React from "react";
 import AnswerSet from "../components/AnswerSet";
-import "../../css/routes/AnswerDetail.css";
+import "../../css/routes/AnswerSet.css";
 import Navigation from "../components/Navigation";
 
 const AnswerPage = (props) => {
@@ -9,7 +9,7 @@ const AnswerPage = (props) => {
   return (
     <>
       <Navigation
-        state="--new"
+        state="new"
         link={`/request-detail?${props.location.search}`}
         title="견적 주기"
       />

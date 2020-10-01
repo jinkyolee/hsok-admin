@@ -24,7 +24,7 @@ const Navigation = (props) => {
     );
   } else {
     template = (
-      <nav className={`nav-bar nav-bar${state} center${tag}`}>
+      <nav className={`nav-bar nav-bar--${state} center${tag}`}>
         {type === "link" ? (
           <div className="pos-left column">
             <Link to={link} className="nav-bar__text">

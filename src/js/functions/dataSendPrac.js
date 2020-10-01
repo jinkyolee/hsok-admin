@@ -10,33 +10,61 @@ const images = [
   { src: image4, description: "한복 4" },
 ];
 
-const returnClientData = (token) => {
+const sendDetailData = () => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve([
+        { description: "재밌어 구름 놀이, 뜬 구름 잡는다고 해도", src: image1 },
+        {
+          description: "난 재밌어 이게 너네처럼 연기를 하고 싶지는 않아 clouds",
+          src: image2,
+        },
+        {
+          description: "뜬 구름s like 솜사탕 같아 뜬 구름s like 솜사탕 같아",
+          src: image3,
+        },
+        {
+          description: "연기 같아 연기 같아 연기 같아 내가 하고 있는 건",
+          src: image4,
+        },
+      ]);
+    });
+  });
+};
+
+const sendRequestData = (token, type) => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      if (token === "successToken") {
-        resolve([
-          {
-            description: "소리 없는 방구",
-            images: images,
-          },
-          {
-            description: "훈이 없는 짱구",
-            images: images,
-          },
-          {
-            description: "이곳은 소라게 도시",
-            images: images,
-          },
-          {
-            description: "이곳은 소락의 도시",
-            images: images,
-          },
-        ]);
+      if (type === "empty") {
+        resolve([]);
+        console.log("Processing empty");
       } else {
-        reject("토큰이 일치하지 않습니다");
+        console.log("Processing unempty");
+        if (token === "successToken") {
+          resolve([
+            {
+              description: "소리 없는 방구",
+              images: images,
+            },
+            {
+              description: "훈이 없는 짱구",
+              images: images,
+            },
+            {
+              description: "이곳은 소라게 도시",
+              images: images,
+            },
+            {
+              description: "이곳은 소락의 도시",
+              images: images,
+            },
+          ]);
+        } else {
+          reject("토큰이 일치하지 않습니다");
+        }
       }
     }, 2000);
   });
 };
 
-export default returnClientData;
+export { sendRequestData, sendDetailData };
