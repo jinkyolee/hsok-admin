@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Route, Switch, BrowserRouter, Redirect } from "react-router-dom";
 import useSetURLs from "./js/hooks/useSetURLs";
 import Home from "./js/routes/Home";
@@ -10,6 +10,7 @@ import AnswerPage from "./js/routes/AnswerPage";
 import SignUpPage from "./js/routes/SignUpPage";
 import NoMatch from "./js/routes/NoMatch";
 import LoginPage from "./js/routes/LoginPage";
+import ScrollToTop from "./js/components/ScrollToTop";
 
 const authRoutes = (
   <Switch>
@@ -43,10 +44,11 @@ const guestRoutes = (location, loginCallback) => {
 
 const App = () => {
   const [loginStat, setLoginStat] = useState(true);
-  let location = useSetURLs(window.location.pathname);
+  const [location, setLocation] = useState(window.location.pathname);
 
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Switch>
         {loginStat ? authRoutes : guestRoutes(location, setLoginStat)}
       </Switch>

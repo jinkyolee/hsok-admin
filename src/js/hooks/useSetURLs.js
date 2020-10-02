@@ -3,14 +3,16 @@ import usePrevState from "./usePrevState";
 
 const useSetURLs = (pathname) => {
   const [location, setLocation] = useState(pathname);
+  let prevLocation;
 
   useEffect(() => {
+    console.log("Setting Current URL...");
     setLocation(pathname);
-  }, [pathname]);
+  }, []);
 
-  let prevLocation = usePrevState(location);
+  prevLocation = usePrevState(location);
 
-  return { location, prevLocation };
+  return { location, prevLocation, setLocation };
 };
 
 export default useSetURLs;

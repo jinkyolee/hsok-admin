@@ -41,6 +41,7 @@ const sendRequestData = (token, type) => {
       } else {
         console.log("Processing unempty");
         if (token === "successToken") {
+          console.log("Resolving");
           resolve([
             {
               description: "소리 없는 방구",

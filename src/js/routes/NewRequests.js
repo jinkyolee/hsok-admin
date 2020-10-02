@@ -55,6 +55,7 @@ const NewRequests = () => {
           <h1>No new requests</h1>
         )}
         <button
+          type="button"
           onClick={() => {
             setLoadState(true);
           }}
