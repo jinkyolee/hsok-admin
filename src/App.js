@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Route, Switch, BrowserRouter, Redirect } from "react-router-dom";
-import useSetURLs from "./js/hooks/useSetURLs";
 import Home from "./js/routes/Home";
 import NewRequests from "./js/routes/NewRequests";
 import AnsweredReqs from "./js/routes/AnsweredRequests";
@@ -24,7 +23,7 @@ const authRoutes = (
   </Switch>
 );
 
-const guestRoutes = (location, loginCallback) => {
+const guestRoutes = (loginCallback) => {
   return (
     <Switch>
       <Route path="/" exact={true} component={Home} />
@@ -36,7 +35,7 @@ const guestRoutes = (location, loginCallback) => {
       />
       <Route path="/signup" component={SignUpPage} />
       <Route path="*">
-        <Redirect to={{ pathname: "/login", state: { referrer: location } }} />
+        <Redirect to={{ pathname: "/login" }} />
       </Route>
     </Switch>
   );
@@ -44,14 +43,11 @@ const guestRoutes = (location, loginCallback) => {
 
 const App = () => {
   const [loginStat, setLoginStat] = useState(true);
-  const [location, setLocation] = useState(window.location.pathname);
 
   return (
     <BrowserRouter>
       <ScrollToTop />
-      <Switch>
-        {loginStat ? authRoutes : guestRoutes(location, setLoginStat)}
-      </Switch>
+      <Switch>{loginStat ? authRoutes : guestRoutes(setLoginStat)}</Switch>
     </BrowserRouter>
   );
 };
