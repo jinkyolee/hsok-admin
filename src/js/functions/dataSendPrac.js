@@ -28,7 +28,7 @@ const sendDetailData = () => {
           src: image4,
         },
       ]);
-    });
+    }, 2000);
   });
 };
 

@@ -58,6 +58,7 @@ const NewRequests = () => {
           type="button"
           onClick={() => {
             setLoadState(true);
+            window.scrollTo(0, 0);
           }}
           className="button button--new button--big"
         >
