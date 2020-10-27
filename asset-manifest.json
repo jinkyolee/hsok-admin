@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/hsok-admin/static/css/main.5b627dbc.chunk.css",
+    "main.js": "/hsok-admin/static/js/main.ff609e1c.chunk.js",
+    "main.js.map": "/hsok-admin/static/js/main.ff609e1c.chunk.js.map",
+    "runtime-main.js": "/hsok-admin/static/js/runtime-main.0dc0a2fc.js",
+    "runtime-main.js.map": "/hsok-admin/static/js/runtime-main.0dc0a2fc.js.map",
+    "static/css/2.2a86faee.chunk.css": "/hsok-admin/static/css/2.2a86faee.chunk.css",
+    "static/js/2.22537f6c.chunk.js": "/hsok-admin/static/js/2.22537f6c.chunk.js",
+    "static/js/2.22537f6c.chunk.js.map": "/hsok-admin/static/js/2.22537f6c.chunk.js.map",
+    "index.html": "/hsok-admin/index.html",
+    "precache-manifest.983272e3f16120ba3b3ae92438058715.js": "/hsok-admin/precache-manifest.983272e3f16120ba3b3ae92438058715.js",
+    "service-worker.js": "/hsok-admin/service-worker.js",
+    "static/css/2.2a86faee.chunk.css.map": "/hsok-admin/static/css/2.2a86faee.chunk.css.map",
+    "static/css/main.5b627dbc.chunk.css.map": "/hsok-admin/static/css/main.5b627dbc.chunk.css.map",
+    "static/js/2.22537f6c.chunk.js.LICENSE.txt": "/hsok-admin/static/js/2.22537f6c.chunk.js.LICENSE.txt",
+    "static/media/add-img-btn.png": "/hsok-admin/static/media/add-img-btn.5d17370f.png",
+    "static/media/hanbok1.jpeg": "/hsok-admin/static/media/hanbok1.f6b18fb5.jpeg",
+    "static/media/hanbok2.jpeg": "/hsok-admin/static/media/hanbok2.df74a5ec.jpeg",
+    "static/media/hanbok3.jpeg": "/hsok-admin/static/media/hanbok3.bb8a921e.jpeg",
+    "static/media/hanbok4.jpeg": "/hsok-admin/static/media/hanbok4.1af4fd13.jpeg",
+    "static/media/logo.png": "/hsok-admin/static/media/logo.29259bfb.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0dc0a2fc.js",
+    "static/css/2.2a86faee.chunk.css",
+    "static/js/2.22537f6c.chunk.js",
+    "static/css/main.5b627dbc.chunk.css",
+    "static/js/main.ff609e1c.chunk.js"
+  ]
+}
