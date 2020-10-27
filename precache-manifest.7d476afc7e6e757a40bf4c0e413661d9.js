@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "63ce4377106ad1e92bcc4a76090088ac",
+    "revision": "e866379232ca58f5e4c47da8bc9e9ebe",
     "url": "/hsok-admin/index.html"
   },
   {
-    "revision": "97055e9738ea4ec52333",
+    "revision": "b59fc9ee32fca628b940",
     "url": "/hsok-admin/static/css/2.2a86faee.chunk.css"
   },
   {
-    "revision": "2459162e6ca7ad79d0e2",
+    "revision": "a832eb950960669397bd",
     "url": "/hsok-admin/static/css/main.5b627dbc.chunk.css"
   },
   {
-    "revision": "97055e9738ea4ec52333",
-    "url": "/hsok-admin/static/js/2.93aa31f3.chunk.js"
+    "revision": "b59fc9ee32fca628b940",
+    "url": "/hsok-admin/static/js/2.22537f6c.chunk.js"
   },
   {
     "revision": "29eb69a08ea4198f7b46e1db8a3d5045",
-    "url": "/hsok-admin/static/js/2.93aa31f3.chunk.js.LICENSE.txt"
+    "url": "/hsok-admin/static/js/2.22537f6c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "2459162e6ca7ad79d0e2",
-    "url": "/hsok-admin/static/js/main.d1be3004.chunk.js"
+    "revision": "a832eb950960669397bd",
+    "url": "/hsok-admin/static/js/main.3bb0f1e0.chunk.js"
   },
   {
     "revision": "500c62b3890f2be6eb36",
