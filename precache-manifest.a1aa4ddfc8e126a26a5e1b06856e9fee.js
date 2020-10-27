@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "47795aac34da68c3c583b932d4d02ce1",
+    "revision": "d5f88d97f20b35df902bbe2b9b4c0533",
     "url": "/hsok-admin/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/hsok-admin/static/css/2.2a86faee.chunk.css"
   },
   {
-    "revision": "24c8c22b0366a68550b7",
+    "revision": "76322eae7df96c55d9c8",
     "url": "/hsok-admin/static/css/main.5b627dbc.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/hsok-admin/static/js/2.22537f6c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "24c8c22b0366a68550b7",
-    "url": "/hsok-admin/static/js/main.893fb69d.chunk.js"
+    "revision": "76322eae7df96c55d9c8",
+    "url": "/hsok-admin/static/js/main.ad409dc7.chunk.js"
   },
   {
     "revision": "500c62b3890f2be6eb36",
