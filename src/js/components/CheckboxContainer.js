@@ -9,11 +9,11 @@ const setContent = (order) => {
   if (order === 0) {
     name = "term-use";
     text = "장인의 한복 이용약관 동의";
-    link = "/link-to-terms";
+    link = "/hsok-admin/link-to-terms";
   } else if (order === 1) {
     name = "personal-info";
     text = "개인정보 수집이용 동의";
-    link = "/link-to-personal";
+    link = "/hsok-admin/link-to-personal";
   } else if (order === 2) {
     name = "age-confirm";
     text = "만 14세 확인";
@@ -23,8 +23,8 @@ const setContent = (order) => {
   return { name, text, link };
 };
 
-const CheckboxSmall = (props) => {
-  const { name, text, link } = setContent(props.order);
+const CheckboxSmall = ({ order }) => {
+  const { name, text, link } = setContent(order);
 
   return (
     <div className="check-container">

@@ -10,7 +10,7 @@ const AnswerPage = (props) => {
     <>
       <Navigation
         state="new"
-        link={`/request-detail?${props.location.search}`}
+        link={`/hsok-admin/request-detail?${props.location.search}`}
         title="견적 주기"
       />
       <form

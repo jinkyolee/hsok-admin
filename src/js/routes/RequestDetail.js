@@ -36,7 +36,11 @@ const RequestDetail = (props) => {
 
   return (
     <>
-      <Navigation state="new" link="/new-requests" title="요청 세부 정보" />
+      <Navigation
+        state="new"
+        link="/hsok-admin/new-requests"
+        title="요청 세부 정보"
+      />
       <section className="home-content" style={{ height: "auto" }}>
         <section className="detail-container top-item--desk">
           {loadState ? (
@@ -54,7 +58,7 @@ const RequestDetail = (props) => {
           )}
         </section>
         <Link
-          to={`/answer-request${props.location.search}`}
+          to={`/hsok-admin/answer-request${props.location.search}`}
           className="button button--big button--new"
         >
           견적 답변 하러 가기

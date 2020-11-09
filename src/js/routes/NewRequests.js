@@ -21,21 +21,22 @@ const setButtonVisible = (loadState) => {
 };
 
 const NewRequests = () => {
-  const rootLocation = "/new-requests";
+  const rootLocation = "/hsok-admin/new-requests";
   const [requests, setRequests] = useState([]);
   const [loadState, setLoadState] = useState(true);
 
   useEffect(() => {
     setButtonVisible(loadState);
-    getRequests("successToken", "unempty").then((requests) => {
-      setRequests(requests);
-      setLoadState(false);
-    });
+    getRequests("successToken", "unempty")
+      .then((requests) => {
+        setRequests(requests);
+      })
+      .then(() => setLoadState(false));
   }, [loadState]);
 
   return (
     <>
-      <Navigation state="new" link="/" title="새 요청" />
+      <Navigation state="new" link="/hsok-admin/" title="새 요청" />
       <div className="requests-container">
         {loadState ? (
           <h1>Loading</h1>

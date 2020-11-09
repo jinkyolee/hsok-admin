@@ -28,8 +28,8 @@ const setContent = (order) => {
   return { name, placeholder, content, containerClass };
 };
 
-const InputContainer = (props) => {
-  let { name, placeholder, content, containerClass } = setContent(props.order);
+const InputContainer = ({ order, onChange }) => {
+  let { name, placeholder, content, containerClass } = setContent(order);
 
   return (
     <div className={`input-container ${containerClass}`}>
@@ -41,6 +41,7 @@ const InputContainer = (props) => {
         className="text-input"
         name={name}
         placeholder={placeholder}
+        onChange={(e) => onChange(e.target.value)}
         required
       />
     </div>

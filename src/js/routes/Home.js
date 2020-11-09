@@ -18,13 +18,13 @@ const Home = () => {
         </div>
         <div className="home-actions">
           <Link
-            to="/new-requests"
+            to="/hsok-admin/new-requests"
             className="button button--new text-decoration-none"
           >
             견적 주기
           </Link>
           <Link
-            to="/answered-requests"
+            to="/hsok-admin/answered-requests"
             className="button button--answered text-decoration-none"
           >
             완료된 견적

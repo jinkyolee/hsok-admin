@@ -21,7 +21,7 @@ const setButtonVisible = (loadState) => {
 };
 
 const AnsweredRequests = () => {
-  const rootLocation = "/answered-requests";
+  const rootLocation = "/hsok-admin/answered-requests";
   const [requests, setRequests] = useState([]);
   const [loadState, setLoadState] = useState(true);
 

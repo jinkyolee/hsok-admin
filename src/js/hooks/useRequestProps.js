@@ -16,12 +16,12 @@ const useRequestProps = (props) => {
   const [nextURL, setNextURL] = useState();
 
   useEffect(() => {
-    if (from === "/answered-requests") {
+    if (from === "/hsok-admin/answered-requests") {
       setAnswerState("answered");
-      setNextURL("/answer-detail");
+      setNextURL("/hsok-admin/answer-detail");
     } else {
       setAnswerState("new");
-      setNextURL("/request-detail");
+      setNextURL("/hsok-admin/request-detail");
     }
   }, [from]);
 

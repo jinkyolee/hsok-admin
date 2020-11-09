@@ -11,7 +11,7 @@ function AnswerDetail(props) {
     <>
       <Navigation
         state="answered"
-        link={`/answered-requests?${props.location.search}`}
+        link={`/hsok-admin/answered-requests?${props.location.search}`}
         title="답변 보기"
       />
       <section className="answer-sheet top-item--mob top-item--desk">
@@ -19,7 +19,7 @@ function AnswerDetail(props) {
           return <AnswerSet key={index} order={index} answered={answered} />;
         })}
         <Link
-          to="/answered-requests"
+          to="/hsok-admin/answered-requests"
           className="button button--big button--answered"
         >
           다른 요청 보기

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import useRequestProps from "../hooks/useRequestProps";
 import Carousel from "react-bootstrap/Carousel";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -48,10 +47,13 @@ const Request = (props) => {
   const { answerState, nextURL } = useRequestProps(props);
 
   return (
-    <Link
+    <div
       className={`request request--${answerState}`}
       key={props.id}
-      to={`${nextURL}?id=${props.id}`}
+      onClick={(e) => {
+        e.preventDefault();
+        window.location.href = `${nextURL}?id=${props.id}`;
+      }}
     >
       <span className={`request__descrip request__descrip--${answerState}`}>
         {props.description}
@@ -62,7 +64,7 @@ const Request = (props) => {
         answerState={answerState}
         time="lots of time"
       />
-    </Link>
+    </div>
   );
 };
 
