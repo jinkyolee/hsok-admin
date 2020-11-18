@@ -14,37 +14,33 @@ import { LoginProvider } from "./js/context/LoginContext";
 
 const authRoutes = (
   <Switch>
-    <Route path="/hsok-admin/" exact={true} component={Home} />
-    <Route path="/hsok-admin/new-requests" component={NewRequests} />
-    <Route path="/hsok-admin/answered-requests" component={AnsweredReqs} />
-    <Route path="/hsok-admin/request-detail" component={RequestDetail} />
-    <Route path="/hsok-admin/answer-detail" component={AnswerDetail} />
-    <Route path="/hsok-admin/answer-request" component={AnswerPage} />
+    <Route path="/" exact={true} component={Home} />
+    <Route path="/new-requests" component={NewRequests} />
+    <Route path="/answered-requests" component={AnsweredReqs} />
+    <Route path="/request-detail" component={RequestDetail} />
+    <Route path="/answer-detail" component={AnswerDetail} />
+    <Route path="/answer-request" component={AnswerPage} />
+    <Route path="/login">
+      <Redirect to="" />
+    </Route>
     <Route path="*" component={NoMatch} />
   </Switch>
 );
 
 const guestRoutes = (
   <Switch>
-    <Route path="/hsok-admin/" exact={true} component={Home} />
-    <Route path="/hsok-admin/login" exact>
+    <Route path="/" exact={true} component={Home} />
+    <Route path="/login" exact>
       <LoginPage />
     </Route>
-    <Route path="/hsok-admin/signup" component={SignUpPage} />
+    <Route path="/signup" component={SignUpPage} />
     <Route path="*">
-      <Redirect to={{ pathname: "/hsok-admin/login" }} />
+      <Redirect to={{ pathname: "/login" }} />
     </Route>
   </Switch>
 );
 
 const App = () => {
-  // let {
-  //   loginContext,
-  //   LoginContext: { Provider },
-  // } = useLoginContext();
-
-  // useEffect(() => console.log(loginContext), [loginContext]);
-
   return (
     <BrowserRouter>
       <ScrollToTop />

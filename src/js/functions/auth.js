@@ -1,5 +1,5 @@
-import { LOGIN_URL } from "./consts";
-import { SIGNUP_URL } from "./consts";
+import { LOGIN_URL } from "./urls";
+import { SIGNUP_URL } from "./urls";
 
 // const setAppUser = (pk) => {
 //   const localStorage = window.localStorage;
@@ -26,9 +26,9 @@ import { SIGNUP_URL } from "./consts";
 //   }
 // };
 
-export const handleLogin = (username, phoneNum, setLogin) => {
+export const handleLogin = async (username, phoneNum, setLogin) => {
   if (username && phoneNum) {
-    fetch(LOGIN_URL, {
+    const response = await fetch(LOGIN_URL, {
       method: "POST",
       body: JSON.stringify({
         store_name: username,
@@ -39,16 +39,15 @@ export const handleLogin = (username, phoneNum, setLogin) => {
         Origin: "http://localhost:3000",
       },
       redirect: "follow",
-    })
-      .then((response) => response.clone().json())
-      .then((pk) => setLogin(pk))
-      .catch((err) => console.error(err));
+    }).then((response) => response.clone().json());
+
+    setLogin(response);
   }
 };
 
-export const handleSignUp = (username, phoneNum) => {
+export const handleSignUp = async (username, phoneNum) => {
   if (username && phoneNum) {
-    fetch(SIGNUP_URL, {
+    const response = await fetch(SIGNUP_URL, {
       method: "POST",
       body: JSON.stringify({
         store_name: username,
@@ -59,10 +58,12 @@ export const handleSignUp = (username, phoneNum) => {
         Origin: "http://localhost:3000",
       },
       redirect: "follow",
-    }).then((data) => {
-      console.log(data);
-      window.location.href = "./login";
-      console.log("Moved");
     });
+
+    response
+      .then(() => {
+        window.location.href = "./login";
+      })
+      .catch((err) => console.error(err));
   }
 };

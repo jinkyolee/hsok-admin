@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Request from "../components/Request";
 import "../../css/routes/RequestPage.css";
 import Navigation from "../components/Navigation";
-import { sendRequestData } from "../functions/dataSendPrac";
+import { sendRequestData } from "../functions/fetchRequests";
 
 const getRequests = async (token, type) => {
   const receivedData = await sendRequestData(token, type);
@@ -21,7 +21,7 @@ const setButtonVisible = (loadState) => {
 };
 
 const AnsweredRequests = () => {
-  const rootLocation = "/hsok-admin/answered-requests";
+  const rootLocation = "/answered-requests";
   const [requests, setRequests] = useState([]);
   const [loadState, setLoadState] = useState(true);
 

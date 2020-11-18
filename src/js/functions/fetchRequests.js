@@ -1,3 +1,4 @@
+import { REQUESTS_URL } from "./urls";
 import image1 from "../../images/hanbok1.jpeg";
 import image2 from "../../images/hanbok2.jpeg";
 import image3 from "../../images/hanbok3.jpeg";
@@ -10,7 +11,7 @@ const images = [
   { src: image4, description: "한복 4" },
 ];
 
-const sendDetailData = () => {
+export const sendDetailData = () => {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve([
@@ -32,7 +33,7 @@ const sendDetailData = () => {
   });
 };
 
-const sendRequestData = (token, type) => {
+export const sendRequestData = (token, type) => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       if (type === "empty") {
@@ -68,4 +69,15 @@ const sendRequestData = (token, type) => {
   });
 };
 
-export { sendRequestData, sendDetailData };
+export const fetchRequests = async (state, pk) => {
+  const response = await fetch(REQUESTS_URL(state, pk), {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+      Origin: "http://localhost:3000",
+    },
+    redirect: "follow",
+  }).then((response) => response.clone().json());
+
+  return response;
+};

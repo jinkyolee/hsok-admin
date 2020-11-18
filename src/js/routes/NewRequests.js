@@ -2,14 +2,7 @@ import React, { useEffect, useState } from "react";
 import Request from "../components/Request";
 import "../../css/routes/RequestPage.css";
 import Navigation from "../components/Navigation";
-import { sendRequestData } from "../functions/dataSendPrac";
-
-const getRequests = async (token, type) => {
-  const receivedData = await sendRequestData(token, type);
-  return new Promise((resolve) => {
-    resolve(receivedData);
-  });
-};
+import { fetchRequests } from "../functions/fetchRequests";
 
 const setButtonVisible = (loadState) => {
   const button = document.querySelector(".button");
@@ -27,27 +20,38 @@ const NewRequests = () => {
 
   useEffect(() => {
     setButtonVisible(loadState);
-    getRequests("successToken", "unempty")
-      .then((requests) => {
-        setRequests(requests);
+
+    fetchRequests(
+      "unanswered",
+      JSON.parse(window.localStorage.getItem("app_user")).user_pk
+    )
+      .then((resp) => {
+        const filteredResp = resp.filter(
+          (request) => request.ended_or_not !== true
+        );
+        setRequests(filteredResp);
+        console.log(filteredResp);
+        return filteredResp;
       })
-      .then(() => setLoadState(false));
+      .then(() => {
+        setLoadState(false);
+      });
   }, [loadState]);
 
   return (
     <>
-      <Navigation state="new" link="/hsok-admin/" title="새 요청" />
+      <Navigation state="new" link="/" title="새 요청" />
       <div className="requests-container">
         {loadState ? (
           <h1>Loading</h1>
         ) : requests.length > 0 ? (
-          requests.map(({ description, images }, index) => {
+          requests.map(({ id, detail_requests, end_date }) => {
             return (
               <Request
-                key={index}
-                id={index}
-                description={description}
-                images={images}
+                key={id}
+                id={id}
+                detail={detail_requests}
+                endDate={end_date}
                 from={rootLocation}
               />
             );

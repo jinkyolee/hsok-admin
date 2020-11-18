@@ -19,7 +19,7 @@ const LoginPage = () => {
 
   return (
     <div className="home-content">
-      <Navigation state="new" link="/hsok-admin/" title="로그인" />
+      <Navigation state="new" link="/" title="로그인" />
       <div className="explanation--login">로그인하셔야 합니다.</div>
       <form
         className="login-form"
@@ -33,7 +33,7 @@ const LoginPage = () => {
         <InputContainer order={0} onChange={setUsername} />
         <InputContainer order={1} onChange={setPhoneNum} />
         <div className="other-controls">
-          <Link to="/hsok-admin/signup" className="signup-link">
+          <Link to="/signup" className="signup-link">
             회원 가입
           </Link>
         </div>

@@ -21,7 +21,6 @@ export const LoginProvider = ({ authChild, guestChild }) => {
   const setLogin = (loginData) => {
     storage.setItem("app_user", JSON.stringify({ user_pk: loginData }));
     setLoginState(true);
-    console.log(`Set user state to logged in with pk: ${loginData}`);
   };
 
   const setLogout = () => {

@@ -15,7 +15,7 @@ const Navigation = (props) => {
   let location = window.location.pathname;
   let template;
 
-  if (location === "/hsok-admin/") {
+  if (location === "/") {
     template = (
       // eslint-disable-next-line
       <nav className="nav-bar nav-bar--new center--mob">
@@ -34,7 +34,7 @@ const Navigation = (props) => {
         ) : (
           <span className="pos-left nav-bar__text">{title}</span>
         )}
-        <Link to="/hsok-admin/" className="pos-right">
+        <Link to="/" className="pos-right">
           홈
         </Link>
       </nav>
