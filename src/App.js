@@ -1,16 +1,16 @@
 import React from "react";
 import { Route, Switch, BrowserRouter, Redirect } from "react-router-dom";
-import Home from "./js/routes/Home";
-import NewRequests from "./js/routes/NewRequests";
-import AnsweredReqs from "./js/routes/AnsweredRequests";
-import RequestDetail from "./js/routes/RequestDetail";
-import AnswerDetail from "./js/routes/AnswerDetail";
-import AnswerPage from "./js/routes/AnswerPage";
-import SignUpPage from "./js/routes/SignUpPage";
-import NoMatch from "./js/routes/NoMatch";
-import LoginPage from "./js/routes/LoginPage";
-import ScrollToTop from "./js/components/ScrollToTop";
-import { LoginProvider } from "./js/context/LoginContext";
+import Home from "./pages/Home/Home";
+import NewRequests from "./pages/RequestPage/NewRequests";
+import AnsweredReqs from "./pages/RequestPage/AnsweredRequests";
+import RequestDetail from "./pages/RequestDetail/RequestDetail";
+import AnswerDetail from "./pages/AnswerDetail";
+import AnswerPage from "./pages/AnswerPage";
+import SignUpPage from "./pages/AuthPage/SignUpPage";
+import NoMatch from "./pages/NoMatch";
+import LoginPage from "./pages/AuthPage/LoginPage";
+import ScrollToTop from "./components/ScrollToTop";
+import { LoginProvider } from "./functions/global/LoginContext";
 
 const authRoutes = (
   <Switch>

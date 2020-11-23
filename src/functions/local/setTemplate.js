@@ -1,15 +1,13 @@
 import React from "react";
 import buttonImage from "../../images/add-img-btn.png";
-import handleClick from "../functions/imageButtonClick";
+import handleClick from "./imageButtonClick";
 
-const setTemplate = (props) => {
+export const setTemplate = ({ order, answered }) => {
   var title;
   var nameTag;
   var cssTag;
   var button;
   var elementTemplate;
-
-  const { order } = props;
 
   if (order === 0) {
     title = "가격과 할인 정보";
@@ -41,7 +39,7 @@ const setTemplate = (props) => {
     button = true;
   }
 
-  if (props.answered) {
+  if (answered) {
     cssTag = "answer__title--answered";
     elementTemplate = (
       <div className="answer__text">
@@ -58,17 +56,12 @@ const setTemplate = (props) => {
             <button
               type="button"
               className="add-img-button"
-              key={props.order - 1}
+              key={order - 1}
               onClick={() => handleClick(nameTag)}
             >
               <img src={buttonImage} className="add-img-button__image" alt="" />
             </button>
-            <input
-              type="file"
-              key={props.order}
-              name={`${nameTag}File`}
-              hidden
-            />
+            <input type="file" key={order} name={`${nameTag}File`} hidden />
           </div>
         </section>
       );
@@ -87,20 +80,3 @@ const setTemplate = (props) => {
   const template = { title, cssTag, elementTemplate };
   return template;
 };
-
-const AnswerSet = (props) => {
-  const { title, cssTag, elementTemplate } = setTemplate(props);
-
-  // should use useState when receiving images from backend
-  // const [images, setImages] = useState([]);
-
-  return (
-    <section className="answer-set">
-      <span className={`answer__title ${cssTag}`}>{title}</span>
-      {elementTemplate}
-      {props.hasImages && <section class="image-array"></section>}
-    </section>
-  );
-};
-
-export default AnswerSet;

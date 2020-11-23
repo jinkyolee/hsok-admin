@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import "../../css/routes/RequestDetail.css";
-import "../../css/components/Button.css";
+import "./RequestDetail.css";
+import "../../components/0_atoms/Button/Button.css";
 import { Link } from "react-router-dom";
-import Navigation from "../components/Navigation";
-import DetailComponent from "../components/DetailComponent";
-import { sendDetailData } from "../functions/fetchRequests";
+import Navigation from "../../components/Navigation/Navigation";
+import DetailComponent from "../../components/DetailComponent";
+import { sendDetailData } from "../../functions/global/fetchRequests";
 
 const getRequests = async () => {
   const receivedData = sendDetailData();

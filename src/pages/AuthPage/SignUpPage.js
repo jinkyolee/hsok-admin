@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import InputContainer from "../components/InputContainer";
-import { CheckboxSmall, CheckboxBig } from "../components/CheckboxContainer";
-import Navigation from "../components/Navigation";
-import { handleSignUp } from "../functions/auth";
-import "../../css/routes/SignUpPage.css";
+import InputContainer from "../../components/InputContainer";
+import { CheckboxSmall, CheckboxBig } from "../../components/CheckboxContainer";
+import Navigation from "../../components/Navigation/Navigation";
+import { handleSignUp } from "../../functions/global/auth";
+import "./SignUpPage.css";
 
 const SignUpPage = () => {
   const [username, setUsername] = useState("");

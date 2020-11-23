@@ -1,6 +1,6 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
-import usePrevState from "../hooks/usePrevState";
+import usePrevState from "../functions/hooks/usePrevState";
 
 const ScrollToTop = (props) => {
   const location = props.location;

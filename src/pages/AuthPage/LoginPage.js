@@ -1,10 +1,10 @@
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
-import InputContainer from "../components/InputContainer";
-import Navigation from "../components/Navigation";
-import { handleLogin } from "../functions/auth";
-import "../../css/routes/SignUpPage.css";
-import { LoginContext } from "../context/LoginContext";
+import InputContainer from "../../components/InputContainer";
+import Navigation from "../../components/Navigation/Navigation";
+import { handleLogin } from "../../functions/global/auth";
+import "./SignUpPage.css";
+import { LoginContext } from "../../functions/global/LoginContext";
 
 const LoginPage = () => {
   const [username, setUsername] = useState("");
