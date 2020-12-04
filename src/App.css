@@ -1,3 +1,42 @@
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+textarea {
+  resize: none;
+}
+
+span {
+  font-size: small;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+.home-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-content--row {
+  flex-direction: row;
+}
+
+.home-content--spaceA {
+  justify-content: space-evenly;
+}
+
 * {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif !important;
@@ -9,4 +48,41 @@ a {
 
 a:hover {
   text-decoration: none !important;
+}
+
+@media screen and (min-width: 840px) {
+  .hidden--desk {
+    display: none;
+  }
+
+  .top-item--desk {
+    margin-top: 3%;
+  }
+
+  .home-content {
+    height: 92%;
+    padding-top: 2%;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .hidden--mob {
+    display: none;
+  }
+
+  .top-item--mob {
+    margin-top: 16% !important;
+  }
+
+  .hidden--desk {
+    font-size: xx-large;
+  }
+
+  .home-content {
+    height: 100%;
+  }
+
+  .home-content--auto {
+    height: auto;
+  }
 }
