@@ -1,7 +1,7 @@
 import React from "react";
-import AnswerSet from "../components/AnswerSet";
-import "../../css/routes/AnswerSet.css";
-import Navigation from "../components/Navigation";
+import AnswerSet from "../components/AnswerSet/AnswerSet";
+import "../components/AnswerSet/AnswerSet.css";
+import Navigation from "../components/Navigation/Navigation";
 
 const AnswerPage = (props) => {
   const answerSets = [false, false, false, false, false, false, false];

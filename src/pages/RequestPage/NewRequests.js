@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import Request from "../components/Request";
-import "../../css/routes/RequestPage.css";
-import Navigation from "../components/Navigation";
-import { fetchRequests } from "../functions/fetchRequests";
+import Request from "../../components/Request/Request";
+import "./RequestPage.css";
+import Navigation from "../../components/Navigation/Navigation";
+import { fetchRequests } from "../../functions/global/fetchRequests";
 
 const setButtonVisible = (loadState) => {
   const button = document.querySelector(".button");

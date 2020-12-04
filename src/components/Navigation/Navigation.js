@@ -1,7 +1,7 @@
 import React from "react";
-import "../../css/components/Navigation.css";
+import "./Navigation.css";
 import { Link } from "react-router-dom";
-import useSetNavType from "../hooks/useSetNavType";
+import useSetNavType from "../../functions/hooks/useSetNavType";
 
 // Props that have to be sent status, link, title
 // NavBar when at home

@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../../css/routes/AnswerSet.css";
-import AnswerSet from "../components/AnswerSet";
-import Navigation from "../components/Navigation";
+import "../components/AnswerSet/AnswerSet.css";
+import AnswerSet from "../components/AnswerSet/AnswerSet";
+import Navigation from "../components/Navigation/Navigation";
 
 function AnswerDetail(props) {
   const answerSets = [true, true, true, true, true, true, true];

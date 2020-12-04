@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import setRequestProps from "../functions/setRequestProps";
-import setRequestDetail from "../functions/setRequestDetail";
+import setRequestProps from "../../functions/local/setRequestProps";
+import setRequestDetail from "../../functions/local/setRequestDetail";
 import Carousel from "react-bootstrap/Carousel";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "../../css/components/Request.css";
+import "./Request.css";
 
 function objectMap(object, func) {
   return Object.keys(object).reduce((result, key) => {
