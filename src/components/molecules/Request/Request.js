@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import setRequestProps from "../../functions/local/setRequestProps";
-import setRequestDetail from "../../functions/local/setRequestDetail";
+import setRequestProps from "../../../functions/local/setRequestProps";
+import setRequestDetail from "../../../functions/local/setRequestDetail";
 import Carousel from "react-bootstrap/Carousel";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Request.css";

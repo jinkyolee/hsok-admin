@@ -1,9 +1,9 @@
 import React from "react";
 import "./Home.css";
-import "../../components/0_atoms/Button/Button.css";
+import "../../components/atoms/Button/Button.css";
 import logo from "../../images/logo.png";
 import { Link } from "react-router-dom";
-import Navigation from "../../components/Navigation/Navigation";
+import Navigation from "../../components/organisms/Navigation/Navigation";
 
 const Home = () => {
   return (

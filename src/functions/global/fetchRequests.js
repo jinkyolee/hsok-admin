@@ -69,8 +69,19 @@ export const sendRequestData = (token, type) => {
   });
 };
 
-export const fetchRequests = async (state, pk) => {
-  const response = await fetch(REQUESTS_URL(state, pk), {
+export const fetchRequests = (state, pk) => {
+  // const resp = await fetch(REQUESTS_URL(state, pk), {
+  //   method: "GET",
+  //   headers: {
+  //     "Content-Type": "application/json",
+  //     Origin: "http://localhost:3000",
+  //   },
+  //   redirect: "follow",
+  // });
+
+  // const response = await resp.json();
+
+  const response = fetch(REQUESTS_URL(state, pk), {
     method: "GET",
     headers: {
       "Content-Type": "application/json",

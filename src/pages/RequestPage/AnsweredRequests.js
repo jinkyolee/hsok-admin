@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import Request from "../../components/Request/Request";
+import Request from "../../components/molecules/Request/Request";
 import "./RequestPage.css";
-import Navigation from "../../components/Navigation/Navigation";
+import Navigation from "../../components/organisms/Navigation/Navigation";
 import { sendRequestData } from "../../functions/global/fetchRequests";
 
 const getRequests = async (token, type) => {

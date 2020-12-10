@@ -4,7 +4,7 @@ import {
   CheckboxSmall,
   CheckboxBig,
 } from "../../components/molecules/CheckboxContainer";
-import Navigation from "../../components/Navigation/Navigation";
+import Navigation from "../../components/organisms/Navigation/Navigation";
 import { handleSignUp } from "../../functions/global/auth";
 import "./SignUpPage.css";
 
