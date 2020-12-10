@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "./RequestDetail.css";
-import "../../components/0_atoms/Button/Button.css";
+import "../../components/atoms/Button/Button.css";
 import { Link } from "react-router-dom";
-import Navigation from "../../components/Navigation/Navigation";
-import DetailComponent from "../../components/DetailComponent";
+import Navigation from "../../components/organisms/Navigation/Navigation";
+import DetailComponent from "../../components/molecules/DetailComponent";
 import { sendDetailData } from "../../functions/global/fetchRequests";
 
 const getRequests = async () => {

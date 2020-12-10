@@ -1,6 +1,9 @@
 import React, { useState } from "react";
-import InputContainer from "../../components/InputContainer";
-import { CheckboxSmall, CheckboxBig } from "../../components/CheckboxContainer";
+import InputContainer from "../../components/molecules/InputContainer";
+import {
+  CheckboxSmall,
+  CheckboxBig,
+} from "../../components/molecules/CheckboxContainer";
 import Navigation from "../../components/Navigation/Navigation";
 import { handleSignUp } from "../../functions/global/auth";
 import "./SignUpPage.css";

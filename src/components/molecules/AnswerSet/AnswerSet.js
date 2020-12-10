@@ -1,5 +1,5 @@
 import React from "react";
-import { setTemplate } from "../../functions/local/setTemplate";
+import { setTemplate } from "../../../functions/local/setTemplate";
 
 const AnswerSet = ({ order, answered, hasImages }) => {
   const { title, cssTag, elementTemplate } = setTemplate(order, answered);

@@ -9,7 +9,7 @@ import AnswerPage from "./pages/AnswerPage";
 import SignUpPage from "./pages/AuthPage/SignUpPage";
 import NoMatch from "./pages/NoMatch";
 import LoginPage from "./pages/AuthPage/LoginPage";
-import ScrollToTop from "./components/ScrollToTop";
+import ScrollToTop from "./components/atoms/ScrollToTop";
 import { LoginProvider } from "./functions/global/LoginContext";
 
 const authRoutes = (
