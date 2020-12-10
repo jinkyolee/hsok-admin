@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
-import InputContainer from "../../components/InputContainer";
+import InputContainer from "../../components/molecules/InputContainer";
 import Navigation from "../../components/Navigation/Navigation";
 import { handleLogin } from "../../functions/global/auth";
 import "./SignUpPage.css";

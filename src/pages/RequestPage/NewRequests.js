@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Request from "../../components/Request/Request";
 import "./RequestPage.css";
-import Navigation from "../../components/Navigation/Navigation";
+import Navigation from "../../components/organisms/Navigation/Navigation";
 import { fetchRequests } from "../../functions/global/fetchRequests";
 
 const setButtonVisible = (loadState) => {

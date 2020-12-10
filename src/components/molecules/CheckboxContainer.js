@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import checkAll from "../functions/local/checkAll";
-import setLarge from "../functions/local/setLarge";
+import checkAll from "../../functions/local/checkAll";
+import setLarge from "../../functions/local/setLarge";
 
 const setContent = (order) => {
   let name, text, link;
